@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: KrishiSahyog agriculture assistance backend
+
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  KrishiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello-world/
+      Handler: app.lambdaHandler
+      Runtime: nodejs24.x
+      Architectures:
+        - x86_64
+      Events:
+        ResourcesApi:
+          Type: Api
+          Properties:
+            Path: /resources
+            Method: get
+
+        SchemesApi:
+          Type: Api
+          Properties:
+            Path: /schemes
+            Method: get
+
+        StorageApi:
+          Type: Api
+          Properties:
+            Path: /storage
+            Method: get
+            
+        CropGuidanceApi:
+          Type: Api
+          Properties:
+            Path: /crop-guidance
+            Method: get
