@@ -1,0 +1,24 @@
+.page-back-button-wrapper {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 10px;
+  }
+  
+  .page-back-button {
+    border: 1px solid #dedbd5;
+    background: #ffffff;
+    color: #292722;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .page-back-button:hover {
+    background: #292722;
+    color: #ffffff;
+    transform: translateX(-2px);
+  }

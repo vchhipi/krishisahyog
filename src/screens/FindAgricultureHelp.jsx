@@ -270,6 +270,7 @@
 
 
 import { useEffect, useState } from "react";
+import BackButton from "../components/BackButton";
 import { useNavigate } from "react-router-dom";
 import "./workflow.css";
 
@@ -295,6 +296,9 @@ export default function FindAgricultureHelp() {
 
   return (
     <div className="workflow-page">
+         <div className="page-back-button-wrapper">
+        <BackButton fallback="/" />
+      </div>
       <div className="workflow-header">
         <span className="eyebrow">AGRICULTURE SUPPORT</span>
 
@@ -309,7 +313,7 @@ export default function FindAgricultureHelp() {
       {/* TWO MAIN WORKFLOWS */}
       <div className="help-options">
         <article className="help-option-card">
-          <span className="resource-tag">01 · GOVERNMENT SUPPORT</span>
+          {/* <span className="resource-tag">01 · GOVERNMENT SUPPORT</span> */}
 
           <h2>Government Schemes</h2>
 
@@ -327,7 +331,7 @@ export default function FindAgricultureHelp() {
         </article>
 
         <article className="help-option-card">
-          <span className="resource-tag">02 · CROP SUPPORT</span>
+          {/* <span className="resource-tag">02 · CROP SUPPORT</span> */}
 
           <h2>Crop Assistance</h2>
 

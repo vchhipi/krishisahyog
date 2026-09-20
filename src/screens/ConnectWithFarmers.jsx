@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./workflow.css";
-
+import BackButton from "../components/BackButton";
 const farmers = [
   {
     name: "Rajesh Kumar",
@@ -55,6 +55,10 @@ function ConnectWithFarmers() {
 
   return (
     <div className="help-page connect-page">
+        <div className="page-back-button-wrapper">
+    <BackButton fallback="/find-agriculture-help" />
+  </div>
+
       <div className="help-container">
 
         {/* HEADER */}

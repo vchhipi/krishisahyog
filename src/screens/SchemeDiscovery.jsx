@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./workflow.css";
+import BackButton from "../components/BackButton";
 
 const questions = [
   {
@@ -109,6 +110,9 @@ export default function SchemeDiscovery() {
   if (completed) {
     return (
       <div className="workflow-page discovery-page">
+         <div className="page-back-button-wrapper">
+         <BackButton fallback="/find-agriculture-help" />
+         </div>
         <div className="workflow-header">
           <span className="eyebrow">YOUR FARMER PROFILE</span>
 
@@ -153,6 +157,9 @@ export default function SchemeDiscovery() {
 
   return (
     <div className="workflow-page discovery-page compact-discovery">
+        <div className="page-back-button-wrapper">
+      <BackButton fallback="/find-agriculture-help" />
+    </div>
       <div className="question-content">
         <span className="eyebrow">PERSONALIZED SCHEME DISCOVERY</span>
       </div>
